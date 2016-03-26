@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using trial_snake;
 
 namespace Snake
 {
@@ -10,20 +11,21 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            int x1 = 7, y1 = 11, x2 = 4, y2 = 5;
-            char symv = '*', sym = '"';
-            for (int i = 0; i <= 10; i++)
-            {
-                Draw(x1, y1--, sym);
-            }
+            Point p1 = new Point();
+            p1.x = 7;
+            p1.y = 5;
+            p1.sym = '*';
+            p1.Draw();
+
+            Point p2 = new Point();
+            p2.x = 10;
+            p2.y = 11;
+            p2.sym = '&';
+            p2.Draw();
+
             Console.ReadKey();
         }
 
-        private static void Draw(int x1, int y1, char symv)
-        {
-            Console.SetCursorPosition(x1, y1);
-            Console.WriteLine(symv);
-        }
     }
 }
 
