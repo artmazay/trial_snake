@@ -1,0 +1,6 @@
+C:\Users\Artem\Documents\trial_snake.git\trial_snake\trial_snake\bin\Debug\trial_snake.exe.config
+C:\Users\Artem\Documents\trial_snake.git\trial_snake\trial_snake\bin\Debug\trial_snake.exe
+C:\Users\Artem\Documents\trial_snake.git\trial_snake\trial_snake\bin\Debug\trial_snake.pdb
+C:\Users\Artem\Documents\trial_snake.git\trial_snake\trial_snake\obj\Debug\trial_snake.csprojResolveAssemblyReference.cache
+C:\Users\Artem\Documents\trial_snake.git\trial_snake\trial_snake\obj\Debug\trial_snake.exe
+C:\Users\Artem\Documents\trial_snake.git\trial_snake\trial_snake\obj\Debug\trial_snake.pdb
