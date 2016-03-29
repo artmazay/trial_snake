@@ -19,5 +19,16 @@ namespace trial_snake
             }
         }
 
+        public override void Drow()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+            foreach(Point p in pList)
+            {
+                p.Draw();
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
     }
 }
