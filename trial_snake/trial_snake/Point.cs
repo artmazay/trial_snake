@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trial_snake
 {
-    public class Point
+    class Point
     {
         public int x;
         public int y;
@@ -21,10 +21,48 @@ namespace trial_snake
             sym = _sym;
         }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset, Direction direction)
+        {
+            if(direction == Direction.RIGHT)
+            {
+                x += offset;
+            }
+            else if(direction == Direction.LEFT)
+            {
+
+                x -= offset;
+            }
+            else if(direction == Direction.UP)
+            {
+                y -= offset;
+            }
+            else if(direction == Direction.DOWN)
+            {
+                y += offset;
+            }
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.WriteLine(sym);
+        }
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
+        }
+
+        internal void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
     }
 }
