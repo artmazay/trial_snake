@@ -10,7 +10,7 @@ namespace trial_snake
     {
         protected List<Point>pList;
 
-        public void Drow()
+        public virtual void Drow()
         {
             foreach (Point n in pList)
             {

@@ -14,43 +14,31 @@ namespace trial_snake
         static void Main(string[] args)
         {
 
-            HorizontalLine lineUp = new HorizontalLine(0, 78, 0, '*');
-            VerticalLine lineLeft = new VerticalLine(0, 23, 0, '*');
-            HorizontalLine lineDown = new HorizontalLine(0, 78, 23, '*');
-            VerticalLine lineRight = new VerticalLine(0, 23, 78, '*');
-            lineUp.Drow();
-            lineDown.Drow();
-            lineLeft.Drow();
-            lineRight.Drow();
+            VerticalLine line1 = new VerticalLine(6, 12, 3, '.');
+            //Draw(line1);
 
+            Point p = new Point(2, 3, '*');
+            Figure fSnake = new Snake(p, 7, Direction.RIGHT);
+            //Draw(fSnake);
+            Snake sn = (Snake)fSnake;
 
-            Point p2 = new Point(10, 5, '*');
-            Snake snake = new Snake(p2, 5, Direction.RIGHT);
-            snake.Drow();
+            HorizontalLine h1 = new HorizontalLine(4, 9, 5, ',');
+            //Draw(h1);
 
-            FoodCreator food = new FoodCreator(78, 23, '@');
-            Point f = food.CreatorFood();
-            f.Draw();
+            List<Figure> figures = new List<Figure>();
+            figures.Add(fSnake);
+            figures.Add(line1);
+            figures.Add(h1);
 
-            while (true)
+            foreach(var t in figures)
             {
-                if(snake.Eat(f))
-                {
-                    f = food.CreatorFood();
-                    f.Draw();
-                }
-                else
-                {
-                    snake.Move();
-                }
-                Thread.Sleep(200);
-
-                if (Console.KeyAvailable)
-                {
-                    ConsoleKeyInfo info = Console.ReadKey();
-                    snake.HandleKey(info.Key);
-                }
+                t.Drow();
             }
+            Console.ReadKey();
+        }
+        static void Draw(Figure figure)
+        {
+            figure.Drow();
         }
     }
 }
