@@ -34,13 +34,22 @@ namespace trial_snake
 
             while (true)
             {
+                if(snake.Eat(f))
+                {
+                    f = food.CreatorFood();
+                    f.Draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+                Thread.Sleep(200);
+
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo info = Console.ReadKey();
                     snake.HandleKey(info.Key);
                 }
-                Thread.Sleep(300);
-                snake.Move();
             }
         }
     }
