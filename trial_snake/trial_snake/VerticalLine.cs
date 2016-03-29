@@ -21,7 +21,7 @@ namespace trial_snake
 
         public override void Drow()
         {
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
 
             foreach (Point p in pList)
             {

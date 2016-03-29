@@ -17,5 +17,27 @@ namespace trial_snake
                 n.Draw();
             }
         }
+        internal bool IsHit(Figure figure)
+        {
+            foreach (var p in pList)
+            {
+                if (figure.IsHits(p))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private bool IsHits(Point point)
+        {
+            foreach (var p in pList)
+            {
+                if (p.IsHit(point))
+                {
+                    return true;
+                }
+            } 
+            return false;
+        }
     }
 }
