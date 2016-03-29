@@ -8,7 +8,7 @@ namespace trial_snake
 {
     class HorizontalLine : Figure
     {
-        
+        List<Point> pList;
         public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
             pList = new List<Point>();
